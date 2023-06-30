@@ -1,0 +1,20 @@
+﻿PBRT – V4
+
+cmake :
+mkdir build
+cd build
+
+cmake -DPBRT_OPTIX7_PATH=/home/parisha/NVIDIA-OptiX-SDK-7.1.0-linux64-x86_64 -DPBRT_GPU_SHADER_MODEL=sm_80 ../
+
+make
+
+render with TEV:
+
+./build/pbrt --display-server localhost:14158 Submission_Folder/feather-scene.pbrt --gpu --interactive
+
+GPU:
+nvidia driver 470
+cuda 11.0 (To uninstall run cuda-uninstaller in /usr/local/cuda-11.0/bin)
+optix 7.1
+
+
